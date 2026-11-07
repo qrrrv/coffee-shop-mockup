@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#f5efe5">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Название кофейни — концепт сайта</title>
+  <meta name="description" content="Демонстрационный адаптивный макет одностраничного сайта для небольшой независимой кофейни. Контакты, адрес и цены отмечены как данные для уточнения.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/literata-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/manrope-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/images/hero.webp" as="image" type="image/webp">
+  <link rel="stylesheet" href="assets/fonts.css">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="assets/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+  <div class="draft-bar" role="note" aria-label="Статус страницы">
+    <div class="wrap draft-bar__inner">
+      <span class="draft-bar__label"><span class="draft-bar__dot" aria-hidden="true"></span> Демонстрационный макет</span>
+      <span class="draft-bar__note">Не официальный сайт. Поля <span class="draft-bar__bracket">[в скобках]</span> — данные для уточнения.</span>
+    </div>
+  </div>
+
+  <header class="site-header" data-header>
+    <div class="wrap site-header__inner">
+      <a class="brand" href="#top" aria-label="Название кофейни — в начало страницы">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 48 48" role="presentation">
+            <path d="M14 19.5h19.5v6.8A9.7 9.7 0 0 1 23.8 36h-.1a9.7 9.7 0 0 1-9.7-9.7v-6.8Z"/>
+            <path d="M33.5 21.5h2.2a4.8 4.8 0 0 1 0 9.6h-2.2"/>
+            <path d="M19 14.2c0-1.5 1.3-1.8 1.3-3.2M24.3 14.2c0-1.5 1.3-1.8 1.3-3.2M29.5 14.2c0-1.5 1.3-1.8 1.3-3.2"/>
+            <path d="M17.5 39h13" class="brand__mark-base"/>
+          </svg>
+        </span>
+        <span class="brand__text">
+          <span class="brand__kicker">независимая кофейня</span>
+          <span class="brand__name">[название]</span>
+        </span>
+      </a>
+
+      <nav class="site-nav" aria-label="Основная навигация">
+        <a href="#about" data-nav-link>О кофейне</a>
+        <a href="#menu" data-nav-link>Меню</a>
+        <a href="#atmosphere" data-nav-link>Атмосфера</a>
+        <a href="#contacts" data-nav-link>Контакты</a>
+      </nav>
+
+      <div class="site-header__actions">
+        <a class="header-cta" href="#contacts">
+          Связаться
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5.5l4.5 4.5-4.5 4.5"/></svg>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" data-nav-toggle>
+          <span class="nav-toggle__text">Меню</span>
+          <span class="nav-toggle__icon" aria-hidden="true"><span></span><span></span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobile-menu" data-mobile-menu hidden>
+      <div class="wrap mobile-menu__inner">
+        <nav class="mobile-menu__nav" aria-label="Мобильная навигация">
+          <a href="#about"><span class="mobile-menu__index">01</span> О кофейне <span class="mobile-menu__arrow" aria-hidden="true">↗</span></a>
+          <a href="#menu"><span class="mobile-menu__index">02</span> Меню <span class="mobile-menu__arrow" aria-hidden="true">↗</span></a>
+          <a href="#atmosphere"><span class="mobile-menu__index">03</span> Атмосфера <span class="mobile-menu__arrow" aria-hidden="true">↗</span></a>
+          <a href="#contacts"><span class="mobile-menu__index">04</span> Контакты <span class="mobile-menu__arrow" aria-hidden="true">↗</span></a>
+        </nav>
+        <div class="mobile-menu__footer">
+          <div>
+            <span class="micro-label">Часы работы</span>
+            <p class="mobile-menu__hours">[уточнить у владельца]</p>
+          </div>
+          <a class="btn btn--primary btn--small" href="#contacts">Как нас найти <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="nav-scrim" data-nav-scrim hidden></div>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="wrap hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow hero__eyebrow">
+            <span class="eyebrow__dot" aria-hidden="true"></span>
+            Независимая кофейня
+            <span class="eyebrow__sep" aria-hidden="true">·</span>
+            <span class="placeholder-token">[город]</span>
+          </p>
+
+          <h1 class="hero__title">
+            <span>Тише.</span>
+            <span class="hero__title-em">Здесь пахнет</span>
+            <span class="hero__title-last">кофе.
+              <svg class="hero__underline" viewBox="0 0 336 26" preserveAspectRatio="none" aria-hidden="true">
+                <path d="M4 18.2c60.7-9.8 122.7-12.1 185.3-8.1 39.6 2.5 79.2 6.6 118.5 10.4 9.6.9 18.4 1.4 24.2 1.1"/>
+                <path d="M28 23.5c54-4.9 111.4-5.9 168.1-3.1 31.6 1.5 63 4 94.4 6.7"/>
+              </svg>
+            </span>
+          </h1>
+
+          <p class="hero__lead">Место, где можно выдохнуть, встретиться с другом или просто посидеть у окна с чашкой. Без спешки и лишнего шума.</p>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#menu">
+              Посмотреть меню
+              <span class="btn__round" aria-hidden="true">
+                <svg viewBox="0 0 20 20"><path d="M4 10h11M11 5.5l4.5 4.5-4.5 4.5"/></svg>
+              </span>
+            </a>
+            <button class="btn btn--secondary" type="button" data-action="directions">
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 17.5s5.4-5.3 5.4-9.4a5.4 5.4 0 0 0-10.8 0c0 4.1 5.4 9.4 5.4 9.4Z"/><circle cx="10" cy="8.1" r="1.9"/></svg>
+              Как добраться
+            </button>
+          </div>
+
+          <div class="hero__meta">
+            <span class="hero__meta-item">
+              <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="7.2"/><path d="M10 5.8v4.5l3 1.8"/></svg>
+              <span>Часы работы</span>
+              <span class="placeholder-token placeholder-token--small">[уточнить у владельца]</span>
+            </span>
+            <span class="hero__meta-divider" aria-hidden="true"></span>
+            <span class="hero__meta-note">это черновой макет</span>
+          </div>
+        </div>
+
+        <div class="hero__visual">
+          <div class="hero__frame">
+            <picture>
+              <source srcset="assets/images/hero.webp" type="image/webp">
+              <img src="assets/images/hero.jpg" alt="Фотография-заглушка: несколько чашек кофе с латте-артом среди зелёных растений" width="1200" height="1500" fetchpriority="high">
+            </picture>
+            <span class="photo-stamp">
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 6.8h2.2l1-1.7h6.6l1 1.7h2.2v9.2h-13V6.8Z"/><circle cx="10" cy="11" r="2.7"/></svg>
+              фото-заглушка
+            </span>
+          </div>
+
+          <div class="hero__annotation" aria-hidden="true">
+            <svg class="hero__arrow" viewBox="0 0 84 55" fill="none">
+              <path d="M3 43c13-26 35-35 65-30" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="m60 6 10 7-9 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>свет, кофе<br>и немного тишины</span>
+          </div>
+
+          <div class="hero__seal" aria-hidden="true">
+            <svg viewBox="0 0 116 116">
+              <defs><path id="sealCircle" d="M58,58 m-39,0 a39,39 0 1,1 78,0 a39,39 0 1,1 -78,0"/></defs>
+              <text><textPath href="#sealCircle" startOffset="0%">МЕСТО ДЛЯ ПАУЗЫ · МЕСТО ДЛЯ ПАУЗЫ · </textPath></text>
+              <path class="hero__seal-star" d="M58 44v28M44 58h28M48.5 48.5l19 19M67.5 48.5l-19 19"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__track">
+        <span class="ticker__group">
+          <span>независимая кофейня</span><span class="ticker__star">✳</span>
+          <span>тёплый свет</span><span class="ticker__star">✳</span>
+          <span>свежий кофе</span><span class="ticker__star">✳</span>
+          <span>выпечка</span><span class="ticker__star">✳</span>
+          <span>разговоры без спешки</span><span class="ticker__star">✳</span>
+          <span>место у окна</span><span class="ticker__star">✳</span>
+        </span>
+        <span class="ticker__group">
+          <span>независимая кофейня</span><span class="ticker__star">✳</span>
+          <span>тёплый свет</span><span class="ticker__star">✳</span>
+          <span>свежий кофе</span><span class="ticker__star">✳</span>
+          <span>выпечка</span><span class="ticker__star">✳</span>
+          <span>разговоры без спешки</span><span class="ticker__star">✳</span>
+          <span>место у окна</span><span class="ticker__star">✳</span>
+        </span>
+      </div>
+    </div>
+
+    <section class="section about" id="about">
+      <div class="wrap">
+        <div class="section-kicker reveal">
+          <span class="section-kicker__index">01</span>
+          <span class="section-kicker__label">о кофейне</span>
+          <span class="section-kicker__line" aria-hidden="true"></span>
+        </div>
+
+        <div class="about__grid">
+          <div class="about__heading reveal">
+            <h2>Маленькое место<br>для <em>больших пауз.</em></h2>
+            <p class="hand-note about__hand">без спешки и лишнего шума
+              <svg viewBox="0 0 68 18" preserveAspectRatio="none" aria-hidden="true"><path d="M2 12c14-7 33-9 63-5M47 14c7-2 13-4 18-7"/></svg>
+            </p>
+          </div>
+
+          <div class="about__body reveal">
+            <p class="about__lead">Заходите за чашкой кофе, оставайтесь за разговором. Здесь можно устроиться у окна с книгой, встретиться с другом или сделать короткую паузу в середине дня.</p>
+            <p>Независимая кофейня — это про внимательный подход к простым вещам: хорошему кофе, свежей выпечке и спокойному ритму. Без формальностей и суеты.</p>
+            <aside class="about__note">
+              <span class="about__note-star" aria-hidden="true">✳</span>
+              <p>Факты о заведении, истории и команде в макете не придуманы. Детали — <span class="placeholder-token placeholder-token--small">[уточнить у владельца]</span>.</p>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section menu-section" id="menu">
+      <div class="wrap menu-wrap">
+        <div class="section-kicker reveal">
+          <span class="section-kicker__index">02</span>
+          <span class="section-kicker__label">меню</span>
+          <span class="section-kicker__line" aria-hidden="true"></span>
+        </div>
+
+        <div class="menu-head">
+          <h2 class="reveal">Кофе, выпечка<br>и <em>разговоры без спешки.</em></h2>
+          <div class="menu-head__note reveal">
+            <span class="demo-tag">Пример для макета</span>
+            <p>Позиции и цены ниже нейтральные, не взяты у реальной кофейни. Актуальное меню и стоимость — <span class="placeholder-token placeholder-token--small">[уточнить у владельца]</span>.</p>
+          </div>
+        </div>
+
+        <div class="menu-card reveal">
+          <div class="menu-card__top">
+            <div class="menu-tabs" role="tablist" aria-label="Категории меню">
+              <button class="menu-tab is-active" id="tab-coffee" type="button" role="tab" aria-selected="true" aria-controls="panel-coffee" tabindex="0">
+                Кофе <span class="menu-tab__count">5</span>
+              </button>
+              <button class="menu-tab" id="tab-not-coffee" type="button" role="tab" aria-selected="false" aria-controls="panel-not-coffee" tabindex="-1">
+                Не кофе <span class="menu-tab__count">5</span>
+              </button>
+              <button class="menu-tab" id="tab-bakery" type="button" role="tab" aria-selected="false" aria-controls="panel-bakery" tabindex="-1">
+                К выпечке <span class="menu-tab__count">5</span>
+              </button>
+            </div>
+            <span class="menu-card__mark" aria-hidden="true">
+              <svg viewBox="0 0 32 32"><path d="M7 13h15v5a7.5 7.5 0 0 1-7.5 7.5h0A7.5 7.5 0 0 1 7 18v-5Z"/><path d="M22 14.5h2a3.7 3.7 0 0 1 0 7.3h-2"/><path d="M11 9.5c0-1.4 1.2-1.7 1.2-3M16.8 9.5c0-1.4 1.2-1.7 1.2-3"/></svg>
+            </span>
+          </div>
+
+          <div class="menu-panels">
+            <section class="menu-panel" id="panel-coffee" role="tabpanel" aria-labelledby="tab-coffee" tabindex="0">
+              <ul class="menu-list">
+                <li class="menu-item">
+                  <div class="menu-item__main"><h3>Эспрессо</h3><p>классический, двойной</p></div>
+                  <span class="menu-item__price">180 ₽</span>
+                </li>
+                <li class="menu-item">
+                  <div class="menu-item__main"><h3>Капучино</h3><p>мягкий вкус, молочная пенка</p></div>
+                  <span class="menu-item__price">240 ₽</span>
+                </li>
+                <li class="menu-item">
+                  <div class="menu-item__main"><h3>Флэт уайт</h3><p>больше кофе, меньше молока</p></div>
+                  <span class="menu-item__price">260 ₽</span>
+                </li>
+                <li class="menu-item">
+                  <div class="menu-item__main"><h3>Фильтр</h3><p>чистый вкус, лёгкая кислинка</p></div>
+                  <span class="menu-item__price">220 ₽</span>
+                </li>
+                <li class="menu-item">
+                  <div class="menu-item__main"><h3>Раф</h3><p>сливочный, с ванилью</p></div>
+                  <span class="menu-item__price">280 ₽</span>
+                </li>
+              </ul>
+            </section>
+
+            <section class="menu-panel" id="panel-not-coffee" role="tabpanel" aria-labelledby="tab-not-coffee" tabindex="0" hidden>
+              <ul class="menu-list">
+                <li class="menu-item">
+                  <div class="menu-item__main"><h3>Матча-латте</h3><p>на растительном молоке</p></div>
+                  <span class="menu-item__price">280 ₽</span>
+                </li>
+                <li class="menu-item">
+                  <div class="menu-item__main"><h3>Какао</h3><p>с маршмеллоу</p></div>
+                  <span class="menu-item__price">230 ₽</span>
+                </li>
+                <li class="menu-item">
+                  <div class="menu-item__main"><h3>Чай</h3><p>листовой, на выбор</p></div>
+                  <span class="menu-item__price">190 ₽</span>
+                </li>
+                <li class="menu-item">
+                  <div class="menu-item__main"><h3>Лимонад</h3><p>цитрус и розмарин</p></div>
+                  <span class="menu-item__price">240 ₽</span>
+                </li>
+                <li class="menu-item">
+                  <div class="menu-item__main"><h3>Горячий шоколад</h3><p>густой, тёмный</p></div>
+                  <span class="menu-item__price">270 ₽</span>
+                </li>
+              </ul>
+            </section>
+
+            <section class="menu-panel" id="panel-bakery" role="tabpanel" aria-labelledby="tab-bakery" tabindex="0" hidden>
+              <ul class="menu-list">
+                <li class="menu-item">
+                  <div class="menu-item__main"><h3>Круассан</h3><p>классический, с хрустящей корочкой</p></div>
+                  <span class="menu-item__price">190 ₽</span>
+                </li>
+                <li class="menu-item">
+                  <div class="menu-item__main"><h3>Круассан с миндалём</h3><p>хрустящий, сладкий</p></div>
+                  <span class="menu-item__price">240 ₽</span>
+                </li>
+                <li class="menu-item">
+                  <div class="menu-item__main"><h3>Синнабон</h3><p>с корицей</p></div>
+                  <span class="menu-item__price">220 ₽</span>
+                </li>
+                <li class="menu-item">
+                  <div class="menu-item__main"><h3>Брауни</h3><p>с грецким орехом</p></div>
+                  <span class="menu-item__price">210 ₽</span>
+                </li>
+                <li class="menu-item">
+                  <div class="menu-item__main"><h3>Чизкейк</h3><p>нежный, сливочный</p></div>
+                  <span class="menu-item__price">260 ₽</span>
+                </li>
+              </ul>
+            </section>
+          </div>
+
+          <div class="menu-card__footer">
+            <span class="menu-card__demo"><span aria-hidden="true">✳</span> Все цены — пример для макета</span>
+            <span>Состав, объёмы и аллергены — <span class="placeholder-token placeholder-token--small">[уточнить у владельца]</span></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section atmosphere" id="atmosphere">
+      <div class="wrap">
+        <div class="section-kicker reveal">
+          <span class="section-kicker__index">03</span>
+          <span class="section-kicker__label">атмосфера</span>
+          <span class="section-kicker__line" aria-hidden="true"></span>
+        </div>
+
+        <div class="atmosphere__head">
+          <h2 class="reveal">Хочется<br><em>остаться ещё немного.</em></h2>
+          <div class="atmosphere__intro reveal">
+            <p>Свет, любимая чашка и разговоры, которые никуда не спешат. Настроение, которое хочется передать в этом макете.</p>
+            <span class="photo-note">
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 6.8h2.2l1-1.7h6.6l1 1.7h2.2v9.2h-13V6.8Z"/><circle cx="10" cy="11" r="2.7"/></svg>
+              Все фото — заглушки, заменим на настоящие кадры
+            </span>
+          </div>
+        </div>
+
+        <div class="gallery">
+          <figure class="gallery-main reveal">
+            <div class="gallery-media">
+              <picture>
+                <source srcset="assets/images/room.webp" type="image/webp">
+                <img src="assets/images/room.jpg" alt="Фотография-заглушка: столик у окна с кофейником, чашками и растением" width="1100" height="1400" decoding="async">
+              </picture>
+              <span class="photo-stamp photo-stamp--on-image">фото-заглушка</span>
+              <div class="paper-note">
+                <span class="paper-note__star" aria-hidden="true">✳</span>
+                <span class="paper-note__text">кофе, свет<br>и немного тишины</span>
+                <span class="paper-note__meta">настроение макета</span>
+              </div>
+            </div>
+            <figcaption>
+              <span class="gallery-caption__title">Место у окна</span>
+              <span class="gallery-caption__meta">заменить на реальное фото зала</span>
+            </figcaption>
+          </figure>
+
+          <div class="gallery-side">
+            <figure class="gallery-small reveal">
+              <div class="gallery-media">
+                <picture>
+                  <source srcset="assets/images/interior.webp" type="image/webp">
+                  <img src="assets/images/interior.jpg" alt="Фотография-заглушка: зал кофейни с деревянными столами и большой барной стойкой" width="1000" height="750" decoding="async">
+                </picture>
+                <span class="photo-stamp photo-stamp--on-image">фото-заглушка</span>
+              </div>
+              <figcaption>
+                <span class="gallery-caption__title">Тёплый зал</span>
+                <span class="gallery-caption__meta">заменить на реальное фото</span>
+              </figcaption>
+            </figure>
+
+            <figure class="gallery-small reveal">
+              <div class="gallery-media">
+                <picture>
+                  <source srcset="assets/images/pastries.webp" type="image/webp">
+                  <img src="assets/images/pastries.jpg" alt="Фотография-заглушка: свежие круассаны на противне" width="1000" height="750" decoding="async">
+                </picture>
+                <span class="photo-stamp photo-stamp--on-image">фото-заглушка</span>
+              </div>
+              <figcaption>
+                <span class="gallery-caption__title">К выпечке</span>
+                <span class="gallery-caption__meta">заменить на реальное фото витрины</span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contacts" id="contacts">
+      <div class="wrap contacts__inner">
+        <div class="section-kicker section-kicker--light reveal">
+          <span class="section-kicker__index">04</span>
+          <span class="section-kicker__label">контакты</span>
+          <span class="section-kicker__line" aria-hidden="true"></span>
+        </div>
+
+        <div class="contacts__grid">
+          <div class="contacts__content reveal">
+            <h2>Заходите<br><em>на чашку.</em></h2>
+            <p class="contacts__lead">Будем рады видеть вас. Перед визитом уточните актуальные часы работы и адрес у владельца — в макете эти данные пока не заполнены.</p>
+
+            <div class="contact-list">
+              <div class="contact-row">
+                <span class="contact-row__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M12 21s6.7-6.4 6.7-11.4a6.7 6.7 0 0 0-13.4 0C5.3 14.6 12 21 12 21Z"/><circle cx="12" cy="9.6" r="2.3"/></svg>
+                </span>
+                <div class="contact-row__body">
+                  <span class="contact-row__label">Адрес</span>
+                  <p class="contact-row__value"><span class="placeholder-token placeholder-token--light">[город, адрес]</span></p>
+                  <span class="contact-row__hint">[уточнить у владельца]</span>
+                </div>
+              </div>
+
+              <div class="contact-row">
+                <span class="contact-row__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.4"/><path d="M12 7.2v5.2l3.4 2"/></svg>
+                </span>
+                <div class="contact-row__body">
+                  <span class="contact-row__label">Часы работы</span>
+                  <p class="contact-row__value"><span class="placeholder-token placeholder-token--light">[часы работы]</span></p>
+                  <span class="contact-row__hint">[уточнить у владельца]</span>
+                </div>
+              </div>
+
+              <div class="contact-row">
+                <span class="contact-row__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M20 15.8v2.4a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 .1 2.4 2 2 0 0 1 2.1.2h2.4a2 2 0 0 1 2 1.7c.1 1 .3 1.9.7 2.8a2 2 0 0 1-.5 2.1L5.6 8a16 16 0 0 0 6 6l1.2-1.1a2 2 0 0 1 2.1-.5c.9.4 1.8.6 2.8.7a2 2 0 0 1 1.7 2.7Z" transform="translate(2 2) scale(.85)"/></svg>
+                </span>
+                <div class="contact-row__body">
+                  <span class="contact-row__label">Телефон / мессенджер</span>
+                  <p class="contact-row__value"><span class="placeholder-token placeholder-token--light">[телефон или ссылка]</span></p>
+                  <span class="contact-row__hint">[уточнить у владельца]</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="contacts__actions">
+              <button class="btn btn--cream" type="button" data-action="contact">
+                Написать нам
+                <span class="btn__round btn__round--dark" aria-hidden="true">
+                  <svg viewBox="0 0 20 20"><path d="M4 10h11M11 5.5l4.5 4.5-4.5 4.5"/></svg>
+                </span>
+              </button>
+              <button class="btn btn--outline-light" type="button" data-action="directions">
+                Как добраться
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 17.5s5.4-5.3 5.4-9.4a5.4 5.4 0 0 0-10.8 0c0 4.1 5.4 9.4 5.4 9.4Z"/><circle cx="10" cy="8.1" r="1.9"/></svg>
+              </button>
+            </div>
+            <p class="contacts__hint">Кнопки станут прямыми ссылками после добавления телефона, мессенджера и адреса.</p>
+          </div>
+
+          <div class="contacts__map reveal">
+            <div class="map-card">
+              <div class="map-card__label"><span class="map-card__live" aria-hidden="true"></span> Карта-заглушка</div>
+              <svg class="map-art" viewBox="0 0 600 720" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Декоративная карта-заглушка, точный адрес пока не указан">
+                <rect width="600" height="720" fill="#ebe0d0"/>
+                <path d="M-40 122C84 86 148 150 256 124s180-74 388-32" fill="none" stroke="#d2c0aa" stroke-width="32"/>
+                <path d="M-34 330c147 37 227 3 322 41s181 106 350 64" fill="none" stroke="#d8c6b2" stroke-width="21"/>
+                <path d="M106-40c-22 157 32 241 4 356s-91 252-58 444" fill="none" stroke="#d1bfa9" stroke-width="27"/>
+                <path d="M438-34c-30 129 11 222-23 328s-66 238-29 460" fill="none" stroke="#cfbda7" stroke-width="17"/>
+                <path d="M-30 559c139-59 239-24 354-42s198-78 312-40" fill="none" stroke="#d8c6b2" stroke-width="15"/>
+                <path d="M0 480c93-8 129-82 220-77 78 4 108 66 191 45 59-15 108-62 220-57v217H0Z" fill="#dde1cf" opacity=".9"/>
+                <path d="M-12 32c79 26 123 18 183 11 74-9 134-34 209 5 56 29 150 20 232 4" fill="none" stroke="#bfd0cf" stroke-width="23" opacity=".75"/>
+                <g fill="#e2d5c4">
+                  <rect x="185" y="155" width="99" height="74" rx="8" transform="rotate(-8 185 155)"/>
+                  <rect x="311" y="207" width="88" height="69" rx="8" transform="rotate(4 311 207)"/>
+                  <rect x="45" y="383" width="93" height="62" rx="8" transform="rotate(-3 45 383)"/>
+                  <rect x="369" y="367" width="117" height="74" rx="8" transform="rotate(8 369 367)"/>
+                  <rect x="265" y="551" width="81" height="63" rx="8" transform="rotate(-7 265 551)"/>
+                  <rect x="443" y="492" width="93" height="54" rx="8" transform="rotate(2 443 492)"/>
+                </g>
+                <g fill="none" stroke="#f8f2e8" stroke-width="4" stroke-linecap="round" opacity=".85">
+                  <path d="M154 113c24 26 48 47 76 63"/>
+                  <path d="M318 505c22-15 37-36 48-61"/>
+                  <path d="M70 259c89 31 169 21 241 38"/>
+                </g>
+              </svg>
+              <div class="map-pin" aria-hidden="true">
+                <span class="map-pin__ring"></span>
+                <span class="map-pin__body">
+                  <svg viewBox="0 0 32 32"><path d="M10 14h12v4.2a6 6 0 0 1-6 6h0a6 6 0 0 1-6-6V14Z"/><path d="M22 15h1.5a3 3 0 0 1 0 6H22"/><path d="M13.5 10c0-1.2 1-1.4 1-2.5M18.2 10c0-1.2 1-1.4 1-2.5"/></svg>
+                </span>
+              </div>
+              <div class="map-popover">
+                <span class="micro-label">Здесь будет карта</span>
+                <p>Точный адрес ещё не добавлен в макет.</p>
+                <button class="text-link" type="button" data-action="directions">Как добраться <span aria-hidden="true">↗</span></button>
+              </div>
+              <span class="map-card__stamp">схема · не по адресу</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <p class="footer-script">до встречи</p>
+          <a class="footer-wordmark" href="#top">[название кофейни]</a>
+          <p class="footer-tagline">Независимая кофейня · <span class="placeholder-token placeholder-token--light placeholder-token--small">[город]</span></p>
+        </div>
+
+        <div class="footer-cols">
+          <div class="footer-col">
+            <h3>Навигация</h3>
+            <a href="#about">О кофейне</a>
+            <a href="#menu">Меню</a>
+            <a href="#atmosphere">Атмосфера</a>
+            <a href="#contacts">Контакты</a>
+          </div>
+          <div class="footer-col">
+            <h3>Соцсети</h3>
+            <button class="social-placeholder" type="button" data-action="social-telegram">
+              <span>Telegram</span>
+              <span class="social-placeholder__status">[уточнить]</span>
+            </button>
+            <button class="social-placeholder" type="button" data-action="social-vk">
+              <span>ВКонтакте</span>
+              <span class="social-placeholder__status">[уточнить]</span>
+            </button>
+            <button class="social-placeholder" type="button" data-action="contact">
+              <span>Другой мессенджер</span>
+              <span class="social-placeholder__status">[уточнить]</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© <span data-year>2026</span> · Демонстрационный макет для обсуждения. Не является официальным сайтом заведения.</p>
+        <p>Фотографии — стоковые заглушки <a href="https://unsplash.com" target="_blank" rel="noreferrer noopener">Unsplash</a>. Логотипы и фотографии кофейни не использованы.</p>
+        <a class="footer-top-link" href="#top">Наверх <span aria-hidden="true">↑</span></a>
+      </div>
+    </div>
+  </footer>
+
+  <dialog class="info-dialog" id="info-dialog" aria-labelledby="dialog-title">
+    <div class="info-dialog__inner">
+      <button class="info-dialog__close" type="button" data-dialog-close aria-label="Закрыть окно">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+      </button>
+      <span class="info-dialog__eyebrow">Демо-макет · данные уточняются</span>
+      <h2 id="dialog-title">Данные ещё не добавлены</h2>
+      <p id="dialog-text">Эта кнопка станет рабочей, когда в макете появятся контакты и адрес.</p>
+      <div class="info-dialog__actions">
+        <button class="btn btn--primary btn--small" type="button" data-dialog-close>Понятно</button>
+        <a class="dialog-link" href="#contacts" data-dialog-close>К контактам <span aria-hidden="true">↓</span></a>
+      </div>
+      <span class="info-dialog__mark" aria-hidden="true">✳</span>
+    </div>
+  </dialog>
+
+</body>
+</html>
